@@ -8,7 +8,7 @@ After enabling the plugin, singleton `SakuyaCLI` should be added. To add new com
 
 You can configure `SakuyaCLI` scene via export variables, overriding its theme, changing display modes, activation key and logging level.
 
-To make your command work, you need to respective your `SakuyaCommand` resource to the `SakuyaCLI`'s command array variable.
+To make your command work, you need to add your respective `SakuyaCommand` resource to the `SakuyaCLI`'s Loaded Commands variable.
 
 If you have any questions, feel free to open new github Issue!
 
