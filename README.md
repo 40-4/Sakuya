@@ -2,7 +2,7 @@
 # SAKUYA
 Sakuya is a Godot 4 addon, adding simple command line to your game. The plugin is quite simple and easily expandable, allowing user to quickly implement new commands.
 ## Instalation
-Download this repository and add the `sakuya/` directory into the `assets/` directory inside your project. Next enable it inside 
+Download this repository and add the `sakuya/` directory into the `addons/` directory inside your project. Next enable it inside 
 ## Configuration
 After enabling the plugin, singleton `SakuyaCLI` should be added. To add new commands, you need to create a `SakuyaCommand` resource and extend its script, overwriting the `execute` function. This addon has `help` command implemented, so you can use it as a reference.
 
@@ -11,3 +11,5 @@ You can configure `SakuyaCLI` scene via export variables, overriding its theme, 
 To make your command work, you need to respective your `SakuyaCommand` resource to the `SakuyaCLI`'s command array variable.
 
 If you have any questions, feel free to open new github Issue!
+
+This projects uses images from [BootstrapIcons](https://icons.getbootstrap.com/), licenced under the MIT license.
