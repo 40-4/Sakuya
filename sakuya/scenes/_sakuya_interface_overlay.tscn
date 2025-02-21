@@ -1,0 +1,55 @@
+[gd_scene load_steps=3 format=3 uid="uid://q026i2omjs8f"]
+
+[ext_resource type="Script" path="res://addons/sakuya/scripts/_sakuya_interface_overlay.gd" id="1_eqf4k"]
+[ext_resource type="Script" path="res://addons/sakuya/scripts/sakuyaInterface.gd" id="2_qar3e"]
+
+[node name="SakuyaInterfaceOverlay" type="CanvasLayer" node_paths=PackedStringArray("interface")]
+layer = 128
+visible = false
+script = ExtResource("1_eqf4k")
+interface = NodePath("SakuyaIO")
+
+[node name="SakuyaIO" type="Node" parent="." node_paths=PackedStringArray("input", "output")]
+script = ExtResource("2_qar3e")
+input = NodePath("../VBoxContainer2/PanelContainer/VBoxContainer/Input")
+output = NodePath("../VBoxContainer2/PanelContainer/VBoxContainer/Output")
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.0
+mouse_filter = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer2/PanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Output" type="RichTextLabel" parent="VBoxContainer2/PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+focus_mode = 2
+bbcode_enabled = true
+scroll_following = true
+selection_enabled = true
+
+[node name="Input" type="LineEdit" parent="VBoxContainer2/PanelContainer/VBoxContainer"]
+layout_mode = 2
+placeholder_text = "Type Command Here"
+flat = true
+select_all_on_focus = true
+
+[node name="Spacer" type="Control" parent="VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 3.0
+mouse_filter = 2
