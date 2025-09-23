@@ -67,4 +67,4 @@ func command(message : String) -> void:
 			command.context = split
 			command.execute()
 			return
-		self.out("[color=red]Missing command: %s[/color]" % split[0])
+	self.out("[color=red]Missing command: %s[/color]" % split[0])
