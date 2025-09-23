@@ -1,0 +1,11 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://lowqbcgqroi2"]
+
+[ext_resource type="Script" uid="uid://bkxmx7cng6ewo" path="res://addons/sakuya/example_commands/help.gd" id="1_ly8a8"]
+
+[resource]
+script = ExtResource("1_ly8a8")
+alias = "help"
+description = "help <command>
+Shows the description of the comment. 
+Not adding any argument will list all avaliable commands."
+metadata/_custom_type_script = "uid://bu6d5mumnsp2a"

@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=3 uid="uid://bsxx8w764ed5l"]
+
+[ext_resource type="PackedScene" uid="uid://c03pxtm6wjsbw" path="res://addons/sakuya/scenes/SakuyaIO.tscn" id="1_2msgh"]
+[ext_resource type="Script" uid="uid://cbdrb64kpe6q6" path="res://addons/sakuya/scripts/SakuyaTerminal.gd" id="1_oyxjo"]
+
+[node name="SakuyaWindow" type="Window" node_paths=PackedStringArray("IO")]
+oversampling_override = 1.0
+title = "Sakuya Command Line"
+initial_position = 2
+size = Vector2i(400, 400)
+transient = true
+script = ExtResource("1_oyxjo")
+IO = NodePath("SakuyaIO")
+
+[node name="SakuyaIO" parent="." node_paths=PackedStringArray("input", "output") instance=ExtResource("1_2msgh")]
+input = NodePath("../PanelContainer/VBoxContainer/LineEdit")
+output = NodePath("../PanelContainer/VBoxContainer/RichTextLabel")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+scroll_following = true
+
+[node name="LineEdit" type="LineEdit" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+keep_editing_on_text_submit = true

@@ -1,0 +1,57 @@
+[gd_resource type="Theme" load_steps=8 format=3 uid="uid://bydh2hpc7a11b"]
+
+[ext_resource type="FontFile" uid="uid://ci28fxfhgmuqi" path="res://addons/sakuya/theme/CozetteVector.woff2" id="1_nv1s2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nv1s2"]
+content_margin_left = 2.0
+content_margin_top = 2.0
+content_margin_right = 2.0
+content_margin_bottom = 2.0
+bg_color = Color(0, 0, 0, 0.47058824)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l7bro"]
+content_margin_left = 2.0
+content_margin_top = 2.0
+content_margin_right = 2.0
+content_margin_bottom = 2.0
+bg_color = Color(0, 0, 0, 0.47058824)
+corner_detail = 1
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0mapq"]
+bg_color = Color(0, 0, 0, 0.47058824)
+corner_detail = 1
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yuvkf"]
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ae4wb"]
+bg_color = Color(1, 1, 1, 1)
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0l0en"]
+content_margin_left = 2.0
+content_margin_right = 2.0
+bg_color = Color(0, 0, 0, 0.47058824)
+
+[resource]
+default_font = ExtResource("1_nv1s2")
+default_font_size = 13
+LineEdit/styles/focus = SubResource("StyleBoxFlat_nv1s2")
+LineEdit/styles/normal = SubResource("StyleBoxFlat_l7bro")
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_0mapq")
+RichTextLabel/styles/focus = SubResource("StyleBoxFlat_nv1s2")
+VScrollBar/styles/grabber = SubResource("StyleBoxFlat_yuvkf")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxFlat_ae4wb")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxFlat_ae4wb")
+VScrollBar/styles/scroll = SubResource("StyleBoxFlat_0l0en")

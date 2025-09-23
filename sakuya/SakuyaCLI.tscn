@@ -1,9 +1,0 @@
-[gd_scene load_steps=4 format=3 uid="uid://cjio5pqkb3ofh"]
-
-[ext_resource type="Script" path="res://addons/sakuya/scripts/sakuyaCLI.gd" id="1_w6il3"]
-[ext_resource type="Script" path="res://addons/sakuya/scripts/sakuyaCommand.gd" id="2_hfg0q"]
-[ext_resource type="Resource" uid="uid://dreei3d7i1p18" path="res://addons/sakuya/commands/help.tres" id="3_5xs3y"]
-
-[node name="SakuyaCLI" type="Node"]
-script = ExtResource("1_w6il3")
-loaded_commands = Array[ExtResource("2_hfg0q")]([ExtResource("3_5xs3y")])

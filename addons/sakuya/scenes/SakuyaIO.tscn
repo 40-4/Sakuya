@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c03pxtm6wjsbw"]
+
+[ext_resource type="Script" uid="uid://c76b58qkam5tg" path="res://addons/sakuya/scripts/sakuya_io.gd" id="1_ejt6m"]
+
+[node name="SakuyaIO" type="Node"]
+script = ExtResource("1_ejt6m")

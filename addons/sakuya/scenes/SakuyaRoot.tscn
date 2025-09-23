@@ -1,0 +1,10 @@
+[gd_scene load_steps=4 format=3 uid="uid://cboado1u87tvd"]
+
+[ext_resource type="Script" uid="uid://cwvcenu2rvgtp" path="res://addons/sakuya/scripts/sakuya_root.gd" id="1_afka7"]
+[ext_resource type="Script" uid="uid://bu6d5mumnsp2a" path="res://addons/sakuya/scripts/classes/sakuya_command.gd" id="2_i47nc"]
+[ext_resource type="Resource" uid="uid://lowqbcgqroi2" path="res://addons/sakuya/example_commands/help.tres" id="3_r2juc"]
+
+[node name="SakuyaRoot" type="Node"]
+script = ExtResource("1_afka7")
+show_time = true
+command_list = Array[ExtResource("2_i47nc")]([ExtResource("3_r2juc")])
