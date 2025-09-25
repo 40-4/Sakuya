@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://c03pxtm6wjsbw" path="res://addons/sakuya/scenes/SakuyaIO.tscn" id="1_2msgh"]
 [ext_resource type="Theme" uid="uid://bydh2hpc7a11b" path="res://addons/sakuya/theme/SakuyaTheme.tres" id="1_pvvmm"]
-[ext_resource type="Script" uid="uid://cbdrb64kpe6q6" path="res://addons/sakuya/scripts/SakuyaTerminal.gd" id="1_sjjqa"]
+[ext_resource type="Script" uid="uid://cbdrb64kpe6q6" path="res://addons/sakuya/scripts/sakuya_terminal.gd" id="1_sjjqa"]
 
 [node name="SakuyaWindow" type="CanvasLayer" node_paths=PackedStringArray("IO")]
 script = ExtResource("1_sjjqa")

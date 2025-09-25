@@ -6,6 +6,6 @@
 script = ExtResource("1_ly8a8")
 alias = "help"
 description = "help <command>
-Shows the description of the comment. 
-Not adding any argument will list all avaliable commands."
+Shows the description of the command. 
+Not providing any arguments will list all avaliable commands."
 metadata/_custom_type_script = "uid://bu6d5mumnsp2a"

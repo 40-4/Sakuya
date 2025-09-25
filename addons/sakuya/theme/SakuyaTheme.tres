@@ -1,5 +1,7 @@
-[gd_resource type="Theme" load_steps=8 format=3 uid="uid://bydh2hpc7a11b"]
+[gd_resource type="Theme" load_steps=12 format=3 uid="uid://bydh2hpc7a11b"]
 
+[ext_resource type="Texture2D" uid="uid://4logdf61f5e7" path="res://addons/sakuya/theme/x_not_pressed.png" id="1_0mapq"]
+[ext_resource type="Texture2D" uid="uid://b8qk3a5to0pcs" path="res://addons/sakuya/theme/x.png" id="1_l7bro"]
 [ext_resource type="FontFile" uid="uid://ci28fxfhgmuqi" path="res://addons/sakuya/theme/CozetteVector.woff2" id="1_nv1s2"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nv1s2"]
@@ -44,6 +46,19 @@ content_margin_left = 2.0
 content_margin_right = 2.0
 bg_color = Color(0, 0, 0, 0.47058824)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6tmpu"]
+bg_color = Color(0.47058824, 0.47058824, 0.47058824, 1)
+expand_margin_left = 4.0
+expand_margin_top = 24.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hgonp"]
+expand_margin_left = 4.0
+expand_margin_top = 24.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
+
 [resource]
 default_font = ExtResource("1_nv1s2")
 default_font_size = 13
@@ -55,3 +70,10 @@ VScrollBar/styles/grabber = SubResource("StyleBoxFlat_yuvkf")
 VScrollBar/styles/grabber_highlight = SubResource("StyleBoxFlat_ae4wb")
 VScrollBar/styles/grabber_pressed = SubResource("StyleBoxFlat_ae4wb")
 VScrollBar/styles/scroll = SubResource("StyleBoxFlat_0l0en")
+Window/constants/close_h_offset = 15
+Window/constants/close_v_offset = 18
+Window/constants/title_height = 24
+Window/icons/close = ExtResource("1_0mapq")
+Window/icons/close_pressed = ExtResource("1_l7bro")
+Window/styles/embedded_border = SubResource("StyleBoxFlat_6tmpu")
+Window/styles/embedded_unfocused_border = SubResource("StyleBoxFlat_hgonp")

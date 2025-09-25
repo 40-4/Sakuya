@@ -1,15 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://bsxx8w764ed5l"]
+[gd_scene load_steps=4 format=3 uid="uid://bsxx8w764ed5l"]
 
 [ext_resource type="PackedScene" uid="uid://c03pxtm6wjsbw" path="res://addons/sakuya/scenes/SakuyaIO.tscn" id="1_2msgh"]
-[ext_resource type="Script" uid="uid://cbdrb64kpe6q6" path="res://addons/sakuya/scripts/SakuyaTerminal.gd" id="1_oyxjo"]
+[ext_resource type="Theme" uid="uid://bydh2hpc7a11b" path="res://addons/sakuya/theme/SakuyaTheme.tres" id="1_h1lgr"]
+[ext_resource type="Script" uid="uid://fl4rd5c602pv" path="res://addons/sakuya/scenes/terminals/sakuya_window.gd" id="2_h1lgr"]
 
 [node name="SakuyaWindow" type="Window" node_paths=PackedStringArray("IO")]
+canvas_item_default_texture_filter = 0
 oversampling_override = 1.0
 title = "Sakuya Command Line"
-initial_position = 2
+position = Vector2i(4, 24)
 size = Vector2i(400, 400)
 transient = true
-script = ExtResource("1_oyxjo")
+theme = ExtResource("1_h1lgr")
+script = ExtResource("2_h1lgr")
 IO = NodePath("SakuyaIO")
 
 [node name="SakuyaIO" parent="." node_paths=PackedStringArray("input", "output") instance=ExtResource("1_2msgh")]

@@ -6,5 +6,4 @@
 
 [node name="SakuyaRoot" type="Node"]
 script = ExtResource("1_afka7")
-show_time = true
 command_list = Array[ExtResource("2_i47nc")]([ExtResource("3_r2juc")])

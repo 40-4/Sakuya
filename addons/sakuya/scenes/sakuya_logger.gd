@@ -1,9 +1,10 @@
 extends Logger
-## Script used for intercepting print messages and pushed errors
+## Script used for intercepting print messages, pushed errors and warnings
 
 func _log_message(message: String, error: bool) -> void:
 	if SakuyaRoot.send_prints == true and error == false:
 		SakuyaRoot.out(message.trim_suffix("\n"))
+
 
 func _log_error(function: String, file: String, line: int, code: String, rationale: String, editor_notify: bool, error_type: int, script_backtraces: Array[ScriptBacktrace]) -> void:
 	if SakuyaRoot.send_errors == true:
@@ -30,8 +31,8 @@ func _log_error(function: String, file: String, line: int, code: String, rationa
 				e_sev = "goldenrod"
 		
 		var backtrace_msg : String = ""
-		for i in script_backtraces:
-				backtrace_msg += i.format().replace("    ", "\t\t") + "\n"
+		for trace in script_backtraces:
+				backtrace_msg += trace.format().replace("    ", "\t\t") + "\n"
 		
 		backtrace_msg = backtrace_msg.trim_suffix("\n")
 		
