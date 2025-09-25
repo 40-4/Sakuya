@@ -7,6 +7,7 @@ extends Node
 @export var send_prints : bool = true
 @export var send_errors : bool = true
 @export_enum("Overlay", "Source Window") var terminal_style : int = 0
+@export var custom_terminal : PackedScene
 @export var trigger_button : Key = Key.KEY_QUOTELEFT
 @export var command_list : Array[SakuyaCommand] = []
 
@@ -30,12 +31,15 @@ func _ready() -> void:
 	
 	#Adding proper terminal
 	var instance : Node
-	match terminal_style:
-		0:
-			instance = preload("res://addons/sakuya/scenes/terminals/SakuyaOverlay.tscn").instantiate()
-		1:
-			instance = preload("res://addons/sakuya/scenes/terminals/SakuyaWindow.tscn").instantiate()
-			instance.close_requested.connect(func(): terminal.hide())
+	if custom_terminal != null:
+		match terminal_style:
+			0:
+				instance = preload("res://addons/sakuya/scenes/terminals/SakuyaOverlay.tscn").instantiate()
+			1:
+				instance = preload("res://addons/sakuya/scenes/terminals/SakuyaWindow.tscn").instantiate()
+				instance.close_requested.connect(func(): terminal.hide())
+	else:
+		instance = custom_terminal.instantiate()
 	
 	#Adds the terminal to the scene and creates access to the node
 	terminal = instance
@@ -59,6 +63,7 @@ func out(message : String) -> void:
 	if self.show_time == true:
 		message = message.replace("\n", "\n\t\t\t")
 	terminal.IO.send_text(message)
+	return
 
 
 ## Evaluate command
@@ -70,3 +75,4 @@ func command(message : String) -> void:
 			command._run()
 			return
 	self.out("[color=red]Missing command: %s[/color]" % split[0])
+	return
