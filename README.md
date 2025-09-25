@@ -51,7 +51,7 @@ To make Your command accessible through the terminal, You have to add the resour
 Sakuya by default creates an action in an Action Map which uses the ``trigger_button`` key as a toggle for the terminal. To create more advanced toggle (for example with Shift or using Joypad) You can create ``sakuya_toggle`` action by Yourself, and assign it to whatever fits Your needs. Plugin detects if the ``sakuya_toggle`` action exists, and wont override it.
 
 ## !EXPERIMENTAL! Custom Terminals
-I've made Sakuya so it's easy to customize. Very barebones terminal needs only few things:
+I've made Sakuya in a way that's easy to customize. Very barebones terminal needs only few things:
 - Root needs a script - if You don't need extending any nodes, You can use ``SakuyaTerminal`` class.
   - However, if You need to extend other class, just make an ``IO`` variable.
 - Add the ``SakuyaIO`` scene to the tree. Make sure the ``IO`` variable points to it.
