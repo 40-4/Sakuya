@@ -7,7 +7,7 @@ Sakuya 2.0 is a complete rewrite of the addon, leveraging new 4.5 features, maki
 ## Instalation
 Head on to releases and put the ``/sakuya`` directory into the ``/addons`` directory. Then enable it in project settings and You're done! 
 
-After enabling the plugin, singleton `SakuyaRoot` should be added. To add new commands, You need to create a `SakuyaCommand` resource and extend its script, overwriting the `execute` function. This addon has ``help`` command implemented, so You can use it as a reference.
+After enabling the plugin, singleton `SakuyaRoot` should appear. To add new commands, You need to create a `SakuyaCommand` resource and extend its script, overwriting the `execute` function. This addon has ``help`` command implemented, so You can use it as a reference.
 
 ## Screenshots
 <img width="1172" height="702" alt="Screenshot showing Sakuya Plugin in use" src="https://github.com/user-attachments/assets/2cb92822-056c-4af7-bc21-7164d116a704" />
