@@ -31,7 +31,7 @@ func _ready() -> void:
 	
 	#Adding proper terminal
 	var instance : Node
-	if custom_terminal != null:
+	if custom_terminal == null:
 		match terminal_style:
 			0:
 				instance = preload("res://addons/sakuya/scenes/terminals/SakuyaOverlay.tscn").instantiate()
