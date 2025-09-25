@@ -27,8 +27,8 @@ Out of the box, Sakuya has this settings:
 - **Show Time** - shows time of the output, based on the system time
 - **Send Prints** - connects ``stdout`` to the output of the terminal via Godot Logger class
 - **Send Errors** - connects ``stderr`` to the output of the terminal via Godot Logger class. Shows script backtraces. Works for warnings too
-- **Terminal Style** - changes the terminal look. Currently only 2 modes are implemented, although
-- **Custom Terminal** - **!EXPERIMENTAL!** alllows the user to connect their own custom terminal scene
+- **Terminal Style** - changes the terminal look. Currently only 2 modes are implemented.
+- **Custom Terminal** - **!EXPERIMENTAL!** allows the user to connect their own custom terminal scene
 - **Trigger Button** - changes which button shows and hides the terminal
 - **Command List** - array holding every loaded command
 
